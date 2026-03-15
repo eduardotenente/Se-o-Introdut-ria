@@ -20,6 +20,11 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    width: 98vw;
+}
+
 nav {
     display: flex;
     flex-flow: row nowrap;
@@ -32,40 +37,72 @@ nav h1 {
     margin-left: 3%;
 }
 
-nav .menu {
+nav menu {
     flex: 80%;
     color: var(--cinza500);
+}
+
+nav menu p span, nav .login {
+    cursor: pointer;
+    transition: color .3s;
+    margin-right: 2%;
+}
+
+nav menu p span:hover, nav .login:hover {
+    color: var(--cinza950);
+    transition: color .3s;
+}
+
+nav menu p span img {
+    margin-left: 5px;
 }
 
 nav .login {
     flex: 4%;
     margin-right: 3%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     color: var(--cinza500);
 }
 
 nav .login #register {
-
+    margin-left: 20%;
+    color: var(--cinza500);
+    background-color: var(--cinza50);
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--cinza500);
+    cursor: pointer;
+    transition: barder-color .3s, color .3s;
 }
 
 nav .login #register:hover {
-
+    color: var(--cinza950);
+    border-color: var(--cinza950);
+    transition: border-color .3s, color .3s;
 }
 
 main {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+article {
+    margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 5%;
     width: 500px;
     display: flex;
     flex-flow: column nowrap;
     gap: 50px;
 }
 
-main #title {
+article #title {
     font-size: 5.6vw;
 }
 
-main p {
+article p {
     color: var(--cinza500);
     margin-left: 2%;
     font-size: 18px;
@@ -74,7 +111,7 @@ main p {
     line-height: 25px;
 }
 
-main #learn {
+article #learn {
     background-color: var(--cinza950);
     color: var(--cinza50);
     margin-left: 2%;
@@ -83,20 +120,25 @@ main #learn {
     height: 40px;
     font-weight: 700;
     border-radius: 10px;
-    border: none;
+    border: 1px solid var(--cinza950);
     cursor: pointer;
+    transition: background-color .3s, color .3s;
 }
 
-main #learn:hover {
-
+article #learn:hover {
+    background-color: var(--cinza50);
+    color: var(--cinza950);
+    transition: background-color .3s, color .3s;
 }
 
 section#client img {
     padding-right: 30px;
 }
 
-section#image-marketing {
-
+section#image-marketing img {
+    margin-top: 3%;
+    width: 450px;
+    height: 560px;
 }
 
 .attribution { 
